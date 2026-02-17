@@ -1,0 +1,156 @@
+.hero ,
+.hero-slide,
+.hero-slide img {
+  height: 90vh;
+}
+
+
+.hero {
+  width: 100%;
+  scroll-margin-top: 80px; /* adjust to navbar height */
+}
+
+
+.hero-slide {
+  position: relative;
+}
+
+.hero-slide img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 6s ease-in-out;
+}
+
+.carousel-item.active .hero-slide img {
+  animation: bumpEffect 5s ease-in-out forwards;
+}
+
+@keyframes bumpEffect {
+   0% {
+    transform: scale(1) translateX(0);
+  }
+  40% {
+    transform: scale(1.06) translate(-8px);
+  }
+  70% {
+    transform: scale(1.04) translate(-5px);
+  }
+  100% {
+    transform: scale(1.03) translateX(-6px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-item.active .hero-content h1 {
+  animation: fadeUp 1s ease forwards;
+}
+
+.carousel-item.active .hero-content p {
+  animation: fadeUp 1.4s ease forwards;
+}
+
+.carousel-item.active .hero-buttons {
+  animation: fadeUp 1.8s ease forwards;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 155px;
+  height: 155px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(100%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Dark gradient filter */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.1)
+  );
+  z-index: 1;
+}
+
+/* LEFT aligned content */
+.hero-content {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin: 25px 0;
+  line-height: 1.6;
+}
+
+.hero-buttons .btn {
+  margin-top:30px;
+  padding: 17px 32px;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn-2 {
+  margin-left: 20px;
+  background-color: rgba(0, 0, 239, 0.8);
+  color: white;
+  border-color: white;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-weight:300;
+    font-size: 20px;
+    margin-top:10px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width:250px;
+  }
+  .hero-buttons .btn {
+    font-size: 20px;
+    padding: 20px 20px;
+  }
+}
+

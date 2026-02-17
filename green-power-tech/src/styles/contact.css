@@ -1,0 +1,175 @@
+.contact-section {
+  padding: 140px 5%;
+  background: #f1f5f9;
+  scroll-margin-top: 90px;
+}
+
+/* MAIN CONTAINER */
+.contact-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+/* ================= LEFT SIDE INFO ================= */
+
+.contact-info {
+  background: #16a34a;
+  color: white;
+  padding: 60px 50px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.info-box {
+  margin-bottom: 25px;
+}
+
+.info-box h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.info-box p {
+  font-size: 16px;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* ================= RIGHT SIDE FORM ================= */
+
+.contact-form-container {
+  background: white;
+  padding: 70px 60px;
+  border-radius: 25px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Floating Inputs */
+.form-group {
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 22px 18px;
+  border-radius: 12px;
+  border: 2px solid #d1d5db;
+  font-size: 18px;
+  outline: none;
+  transition: 0.3s ease;
+  resize: none;
+}
+
+.form-group label {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  color: #9ca3af;
+  font-size: 16px;
+  transition: 0.3s ease;
+  pointer-events: none;
+  background: white;
+  padding: 0 6px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #22c55e;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -12px;
+  font-size: 13px;
+  color: #22c55e;
+}
+
+/* BUTTON */
+.submit-btn {
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  background: #16a34a;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #15803d;
+  transform: translateY(-4px);
+}
+
+/* Success */
+.success-message {
+  margin-top: 20px;
+  font-size: 17px;
+  color: #16a34a;
+  font-weight: 600;
+  animation: fadeSuccess 0.6s ease forwards;
+}
+
+@keyframes fadeSuccess {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info,
+  .contact-form-container {
+    padding: 40px 35px;
+  }
+
+  .info-box h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.info-box p {
+  font-size: 14px;
+  margin: 5px;
+}
+}

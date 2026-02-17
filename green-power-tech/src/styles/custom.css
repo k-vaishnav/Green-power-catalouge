@@ -1,0 +1,21 @@
+:root {
+  --navbar-height: 110px;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: var(--navbar-height);
+}
+
+#registration,
+#contact {
+  scroll-margin-top: 90px;
+}

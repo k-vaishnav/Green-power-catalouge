@@ -1,0 +1,157 @@
+
+.registration-section {
+  padding: 140px 5%;
+  background: #f9fafb; 
+  scroll-margin-top: 110px;
+  display: flex;
+  justify-content: center;
+   border-top: 1px solid #e5e7eb;
+}
+.registration-container {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 80px 70px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.registration-container h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.registration-container h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #16a34a, #4ade80);
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(34,197,94,0.8);
+}
+
+.registration-container p {
+  font-size: 19px;
+  color: #6b7280;
+  margin-bottom: 60px;
+}
+
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-group {
+  position: relative;
+}
+
+/* INPUT */
+.form-group input {
+  width: 100%;
+  padding: 22px 20px;
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  font-size: 18px;
+  outline: none;
+  transition: 0.3s ease;
+  background: transparent;
+}
+
+/* FOCUS */
+.form-group input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
+
+/* LABEL */
+.form-group label {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 16px;
+  color: #9ca3af;
+  transition: 0.25s ease;
+  pointer-events: none;
+  background: white;
+  padding: 0 6px;
+}
+
+/* FLOATING */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 13px;
+  color: #16a34a;
+}
+
+/* ===============================
+   BUTTON
+=================================*/
+.submit-btn {
+  padding: 18px;
+  border-radius: 50px;
+  border: none;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+
+  background: linear-gradient(90deg, #16a34a, #22c55e, #16a34a);
+  background-size: 200% 200%;
+  animation: gradientMove 4s ease infinite;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
+}
+
+/* ===============================
+   SUCCESS
+=================================*/
+.success-message {
+  margin-top: 20px;
+  font-size: 17px;
+  color: #16a34a;
+  font-weight: 600;
+  animation: fadeSuccess 0.5s ease forwards;
+}
+
+@keyframes fadeSuccess {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .registration-container {
+    padding: 60px 35px;
+  }
+
+  .registration-container h2 {
+    font-size: 32px;
+  }
+
+  .registration-container p {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    font-size: 17px;
+  }
+}
