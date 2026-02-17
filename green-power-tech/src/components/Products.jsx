@@ -3,7 +3,7 @@ import "../styles/products.css";
 
 import solarPanels from "../assets/images/image-1.jpg";
 import plateBattery from "../assets/images/plateBattery.jpeg";
-import LithiumBattery from "../assets/images/image-1.jpeg";
+import LithiumBattery from "../assets/images/Image-1.jpeg";
 import solarInverter from "../assets/images/solar-inverter.jpeg";
 
 const products = [
