@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Image1 from "../../assets/images/Image-1.jpg";
+import Image1 from "../../assets/images/image-1.jpg";
 import Image2 from "../../assets/images/Image-1.jpeg";
-import Image3 from "../../assets/images/Image-2.avif";
+import Image3 from "../../assets/images/image-2.avif";
 import "./hero.css";
 
 const slides = [
